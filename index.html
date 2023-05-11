@@ -419,7 +419,14 @@
                 <h2>
                     Связь с нами
                 </h2>
-                <form action="mail.php" method="post">
+                <form>
+                    <div class="form-group">
+
+                        <input type="text" name="sursname" class="form-control" placeholder="Фамилия">
+                        <input type="hidden" name="from" value="Остались вопросы?" class="form-control">
+        
+        
+                    </div>
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" placeholder="Имя">
                         <input type="hidden" name="from" value="Остались вопросы?" class="form-control"
@@ -518,54 +525,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-<div style="display: none">
-    <div id="call0">
-        <h2>Оставьте свои <br>контактные данные и мы<br>
-            Вам перезвоним</h2>
-        <form>
-            <div class="form-group">
 
-                <input type="text" name="name" class="form-control" placeholder="Имя">
-                <input type="hidden" name="from" value="Другие проблемы" class="form-control">
-
-            </div>
-            <div class="form-group">
-
-                <input type="text" name='phone' class="form-control" placeholder="Телефон">
-            </div>
-
-            <div class="form-group">
-                    <textarea placeholder="Опишите вашу проблему" name="more" class="form-control"
-                              id="exampleFormControlTextarea1" rows="5"></textarea>
-            </div>
-            <div class="form-group">
-                	<select name="where">
-
-                    <option value="" selected disabled>Как с вами удобно связаться</option>
-                    <option value="По телефону">По телефону</option>
-                    <option value="Viber">Viber</option>
-                    <option value="WhatsApp">WhatsApp</option>
-                    <option value="Telegram">Telegram</option>
-                </select>
-
-
-
-                <input type="text" name='time' class="form-control" placeholder="Удобное время для связи">
-<select name="consult" style="margin-top:20px;">
-
-                    <option value="" selected disabled>Когда нужна консультация	</option>
-                    <option value="Сейчас срочно">Сейчас срочно</option>
-                    <option value="Сегодня в любое время">Сегодня в любое время</option>
-                    <option value="Завтра">Завтра</option>
-                    <option value="В другой день">В другой день</option>
-                </select>  
-            </div>
-
-        
-
-<button type="submit" class="btn2">Отправить заявку</button>
-        </form>
-    </div>	
 
     <div id="call1">
         <h2>Вход для администратора</h2>
@@ -592,6 +552,13 @@
         <form >
             <div class="form-group">
 
+                <input type="text" name="sursname" class="form-control" placeholder="Фамилия">
+                <input type="hidden" name="from" value="Заказать звонок" class="form-control">
+
+
+            </div>
+            <div class="form-group">
+
                 <input type="text" name="name" class="form-control" placeholder="Имя">
                 <input type="hidden" name="from" value="Заказать звонок" class="form-control">
 
@@ -605,8 +572,9 @@
                 <select name="where">
 
                     <option value="" selected disabled>Кто вы?</option>
-                    <option value="По телефону">Ученик</option>
-                    <option value="Viber">Родитель</option>
+                    <option value="student">Ученик</option>
+                    <option value="parent">Родитель</option>
+                    <option value="teacher">Учитель</option>
                     
                 </select>
                 <input type="text" name='time' class="form-control" placeholder="Удобное время для связи">
